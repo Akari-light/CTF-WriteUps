@@ -15,7 +15,7 @@ def notification(msg):
                     )
 
 def chrome_instance():
-    url = 'https://fypj.sit.nyp.edu.sg/'
+    url = 'https://fypj.sit.nyp.edu.sg/'`
     check_in = ['08:25','08:26','08:27','08:28','08:29', '08:30']
     check_out = ['18:00', '18:01', '18:02', '18:03', '18:04', '18:05']
     driver = webdriver.Chrome()
@@ -34,7 +34,9 @@ def chrome_instance():
     driver.find_element('xpath', '/html/body/form/div[3]/nav/div/div[2]/ul[1]/li[1]/ul/li[1]/a').click()
 
     # Sign In/Out
-    driver.find_element('xpath', '/html/body/form/div[3]/div[2]/div[5]/div/div/div[4]/div[3]/input')
+    driver.find_element('xpath', '/html/body/form/div[3]/div[2]/div[5]/div/div/div[4]/div[3]/input').click()
+    driver.find_element('xpath', '/html/body/form/div[3]/div[2]/div[8]/div/div/div[3]/button').click()
+    
 
     if strftime('%H:%M') in check_in:
         notification("You have successfully checked into the FYPJ System at " + ctime())
